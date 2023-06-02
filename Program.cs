@@ -42,3 +42,30 @@ public class Program
         Console.WriteLine($"Le salaire de {employe1.Nom} est de {salaireEmploye1} ariary.");
     }
 }
+
+
+public class ClientRepository
+
+{
+
+    public void InsertClient(Client client)
+
+    {
+
+        // Insertion du client dans la base de données
+
+    }
+
+    public Client GetClient(int clientId)
+
+    {
+
+        // Récupération du client depuis la base de données
+
+        return new Client();
+
+    }
+
+}
+
+
