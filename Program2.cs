@@ -79,3 +79,73 @@ public class Programme
         AfficherSalaire(employe2);
     }
 }
+
+public interface IClientRepository
+
+{
+
+    void InsertClient(Client client);
+
+    Client GetClient(int clientId);
+
+}
+
+public class ClientRepository : IClientRepository
+
+{
+
+    public void InsertClient(Client client)
+
+    {
+
+        // Insertion du client dans la base de données
+
+    }
+
+    public Client GetClient(int clientId)
+
+    {
+
+        // Récupération du client depuis la base de données
+
+        return new Client();
+
+    }
+
+}
+
+public class ClientService
+
+{
+
+    private readonly IClientRepository _clientRepository;
+
+    public ClientService(IClientRepository clientRepository)
+
+    {
+
+        _clientRepository = clientRepository;
+
+    }
+
+    public void AddClient(Client client)
+
+    {
+
+        // Validation du client...
+
+        _clientRepository.InsertClient(client);
+
+    }
+
+    public Client GetClient(int clientId)
+
+    {
+
+        return _clientRepository.GetClient(clientId);
+
+    }
+
+}
+
+
